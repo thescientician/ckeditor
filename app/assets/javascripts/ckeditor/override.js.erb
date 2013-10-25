@@ -3,6 +3,7 @@
 <%- unless Rails.env.production? %>
   window['CKEDITOR_BASEPATH'] = "/assets/ckeditor/";
 <%- else %>
+  window['CKEDITOR_BASEPATH'] = Rails.application.config.assets.prefix + "/ckeditor";
 <%- end %>
 
 window.CKEDITOR_ASSETS_MAPPING = {

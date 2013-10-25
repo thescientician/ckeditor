@@ -1,10 +1,4 @@
-
-
-<%- unless Rails.env.production? %>
-  window['CKEDITOR_BASEPATH'] = "/assets/ckeditor/";
-<%- else %>
-  window['CKEDITOR_BASEPATH'] = Rails.application.config.assets.prefix + "/ckeditor";
-<%- end %>
+window['CKEDITOR_BASEPATH'] = "/assets/ckeditor/";
 
 window.CKEDITOR_ASSETS_MAPPING = {
 <% Rails.application.assets.each_logical_path(->(path){ path =~ /ckeditor/ && path != 'ckeditor/override.js' }) do |asset| %>

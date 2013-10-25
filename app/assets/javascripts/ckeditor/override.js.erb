@@ -12,10 +12,10 @@ window.CKEDITOR_GETURL = function( resource ) {
     // resource = this.basePath + resource;
 
   // Add the timestamp, except for directories.
-  if ( resource.charAt( resource.length - 1 ) != '/'  ){
-    var url = resource.match( /^(.*?:\/\/[^\/]*)\/assets\/(.+)/ );
-    if(url) resource = url[1] + (CKEDITOR_ASSETS_MAPPING[url[2]] || '/assets/' + url[2]);
-  }
+  // if ( resource.charAt( resource.length - 1 ) != '/'  ){
+  //   var url = resource.match( /^(.*?:\/\/[^\/]*)\/assets\/(.+)/ );
+  //   if(url) resource = url[1] + (CKEDITOR_ASSETS_MAPPING[url[2]] || '/assets/' + url[2]);
+  // }
 
   return resource;
 }
